@@ -1,1 +1,1 @@
-web: start public/home.html
+web: start home.html
