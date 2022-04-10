@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>CFT - Broken Access Controls</title>
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css" />
+    <link rel="stylesheet" href="stylesheets/ctf.css" />
+  </head>
+
+  <body>
+    <div>
+      <link rel="import" href="game-code.html" />
+    </div>
+    <div class="container">
+      <figure class="image">
+        <img src="src/HKBU.png" style="max-width: 8%; padding-top: 30px" />
+      </figure>
+      <br />
+      <h1 class="title">CTF Game - Broken Access Controls</h1>
+      <br />
+      <p>
+        <b>Broken access controls</b> can cause <b>authorization bypass</b>.
+        Below is a simple HTML form for
+        <b>transferring Bitcoin between accounts</b> and the corresponding code.
+      </p>
+      <br />
+      <p>
+        Can you spot the <b>vulnerability</b> in the code where the control
+        preventing <b>unauthorized transfers</b> could bypassed?
+      </p>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <div class="columns">
+        <form class="column is-one-third">
+          From:
+          <br />
+          <select name="From">
+            <option value="Wallet">Bitcoin Wallet</option>
+          </select>
+          <br /><br />
+          To:
+          <br />
+          <select name="To">
+            <option value="Savings">Savings Account</option>
+            <option value="External">External Wallet</option>
+          </select>
+          <br /><br />
+          Amount:
+          <br />
+          BTC <input type="text" name="amount" />
+          <input type="hidden" id="isAuthorized" value="false" />
+          <input type="submit" />
+          <br />
+        </form>
+
+        <div class="ctf-code-left">
+          <span class="ctf-code-block-0">
+            &nbsp;1&nbsp;&nbsp;&lt;!-- HTML FORM --&gt;
+          </span>
+          <span class="ctf-code-block-1">&nbsp;2&nbsp;&nbsp;&lt;form&gt;</span
+          ><span class="ctf-code-block-0">&nbsp;3&nbsp;&nbsp;From: </span
+          ><span class="ctf-code-block-1"
+            >&nbsp;4&nbsp;&nbsp;&lt;select name="From"&gt;</span
+          ><span class="ctf-code-block-0"
+            >&nbsp;5&nbsp;&nbsp;&lt;option value="Checking"&gt;Bitcoin
+            Wallet&lt;/option&gt;</span
+          ><span class="ctf-code-block-1"
+            >&nbsp;6&nbsp;&nbsp;&lt;/select&gt;</span
+          ><span class="ctf-code-block-0">&nbsp;7&nbsp;&nbsp;To: </span
+          ><span class="ctf-code-block-1"
+            >&nbsp;8&nbsp;&nbsp;&lt;select name="To"&gt;</span
+          ><span class="ctf-code-block-0"
+            >&nbsp;9&nbsp;&nbsp;&lt;option value="Savings"&gt;Savings
+            Account&lt;/option&gt;</span
+          ><span class="ctf-code-block-1"
+            >10&nbsp;&nbsp;&lt;option value="External"&gt;External
+            Wallet&lt;/option&gt;</span
+          ><span class="ctf-code-block-0">11&nbsp;&nbsp;&lt;/select&gt;</span
+          ><span class="ctf-code-block-1"
+            >12&nbsp;&nbsp;Amount: BTC &lt;input type="text"
+            name="amount"&gt;</span
+          ><span class="ctf-code-block-0"
+            >13&nbsp;&nbsp;&lt;input type="hidden" id="isAuthorized"
+            value="false"&gt;</span
+          ><span class="ctf-code-block-1"
+            >14&nbsp;&nbsp;&lt;input type="submit"&gt;</span
+          ><span class="ctf-code-block-0">15&nbsp;&nbsp;&lt;/form&gt;</span>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <div class="columns">
+        <p>
+          Which <b>line of code</b> contains an
+          <b>authorization bypass vulnerability</b> that could bring about
+          <b>broken access control</b>?
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <form id="ctf2-flag">
+        <div class="ctf-submit">
+          <select name="Submit" class="drop-down" id="dropdown">
+            <option value="4">Line 4</option>
+            <option value="5">Line 5</option>
+            <option value="8">Line 8</option>
+            <option value="9">Line 9</option>
+            <option value="10">Line 10</option>
+            <option value="12">Line 12</option>
+            <option value="13">Line 13</option>
+            <option value="14">Line 14</option>
+          </select>
+
+          <button
+            class="input"
+            id="ctf2_flag_submit"
+            name="ctf2_flag_submit"
+            onclick="checkResult()"
+            type="button"
+          >
+            Try
+          </button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="container">
+      <div id="show"></div>
+    </div>
+    <script>
+      function _0x2f38() {
+        var _0x3053cf = [
+          "Incorrect.\x20Hint:\x20Think\x20about\x20client-side\x20control.",
+          "8396731WRFVFV",
+          "2232711afkHES",
+          "show",
+          "12307312RsFFmd",
+          "value",
+          "9bVvKrV",
+          "5562voIqTP",
+          "15104660rcZllC",
+          "Congratulations.\x20The\x20flag\x20is:\x20CTF_{GAME}.\x20This\x20is\x20a\x20client-side\x20control.\x20The\x20control\x20can\x20be\x20bypassed\x20by\x20simply\x20changing\x20the\x20hidden\x20value\x20of\x20isAuthorized.",
+          "3175vOHjIN",
+          "getElementById",
+          "9911220JbISfJ",
+          "dropdown",
+          "8VcWmJq",
+          "1mjcier",
+          "537572ojDgsT",
+          "innerHTML",
+        ];
+        _0x2f38 = function () {
+          return _0x3053cf;
+        };
+        return _0x2f38();
+      }
+      function _0x13c5(_0x5d4251, _0x2eac4d) {
+        var _0x2f3839 = _0x2f38();
+        return (
+          (_0x13c5 = function (_0x13c528, _0x1663fd) {
+            _0x13c528 = _0x13c528 - 0xaa;
+            var _0x3e5461 = _0x2f3839[_0x13c528];
+            return _0x3e5461;
+          }),
+          _0x13c5(_0x5d4251, _0x2eac4d)
+        );
+      }
+      (function (_0x4d6db8, _0x5562e8) {
+        var _0x47cc23 = _0x13c5,
+          _0x433599 = _0x4d6db8();
+        while (!![]) {
+          try {
+            var _0x38d776 =
+              (-parseInt(_0x47cc23(0xb3)) / 0x1) *
+                (-parseInt(_0x47cc23(0xb4)) / 0x2) +
+              (-parseInt(_0x47cc23(0xb8)) / 0x3) *
+                (-parseInt(_0x47cc23(0xb2)) / 0x4) +
+              (parseInt(_0x47cc23(0xae)) / 0x5) *
+                (-parseInt(_0x47cc23(0xab)) / 0x6) +
+              -parseInt(_0x47cc23(0xb7)) / 0x7 +
+              (-parseInt(_0x47cc23(0xba)) / 0x8) *
+                (-parseInt(_0x47cc23(0xaa)) / 0x9) +
+              -parseInt(_0x47cc23(0xac)) / 0xa +
+              parseInt(_0x47cc23(0xb0)) / 0xb;
+            if (_0x38d776 === _0x5562e8) break;
+            else _0x433599["push"](_0x433599["shift"]());
+          } catch (_0x52b3ac) {
+            _0x433599["push"](_0x433599["shift"]());
+          }
+        }
+      })(_0x2f38, 0xdb402);
+      function checkResult() {
+        var _0x3216cd = _0x13c5,
+          _0xebe0f8 = document[_0x3216cd(0xaf)](_0x3216cd(0xb1))[
+            _0x3216cd(0xbb)
+          ];
+        _0xebe0f8 == 0xd
+          ? (document["getElementById"](_0x3216cd(0xb9))[_0x3216cd(0xb5)] =
+              _0x3216cd(0xad))
+          : (document["getElementById"](_0x3216cd(0xb9))[_0x3216cd(0xb5)] =
+              _0x3216cd(0xb6));
+      }
+    </script>
+  </body>
+</html>
