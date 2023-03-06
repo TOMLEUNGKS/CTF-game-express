@@ -1,1 +1,1 @@
-##### This is a CTF game developed for COMP7170 using JavaScript
+This is a CTF game developed for COMP7170 using JavaScript
