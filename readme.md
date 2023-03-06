@@ -1,6 +1,1 @@
-created readme.md
-
-
-updating develop branch
-
-updating master branch
+## This is a CTF game developed for COMP7170 using JavaScript
